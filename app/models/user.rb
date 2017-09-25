@@ -15,6 +15,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :photo_comments,
+             :through => :comments,
+             :source => :photo
+
   # Validations
 
   # Include default devise modules. Others available are:
